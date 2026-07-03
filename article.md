@@ -5,7 +5,11 @@ jupyter:
       extension: .md
       format_name: markdown
       format_version: '1.3'
-      jupytext_version: 1.19.3
+      jupytext_version: 1.19.4
+  kernelspec:
+    display_name: base
+    language: python
+    name: python3
 ---
 
 <!-- #region tags=["title"] -->
@@ -293,8 +297,8 @@ BERTopic identified 527 distinct subject clusters across the 35,368 images. Of t
 Cluster sizes demonstrated considerable variability. Among the 526 meaningful topics, the mean encompasses 51.3 images, while the median consists of merely 32, indicating a right-skewed distribution where the majority of topics contain relatively few photographs, and a minority of larger topics elevate the mean. The smallest meaningful topics comprise 10 images, which was the minimum threshold set, whereas the largest include 1,024 photographs. This skewed distribution reflects the nature of the collection: some subjects received consistent photographic attention, whereas others were documented only sporadically.
 <!-- #endregion -->
 
-```python
-# Figure 1: Topic distribution histogram
+```python jdh={"module": "object", "object": {"source": ["Distribution of Images Across Topics"], "type": "image"}} tags=["figure-distribution-*"]
+# Figure 1: Distribution of Images Across Topics
 
 topic_counts = results_df['Topic'].value_counts().sort_index()
 topic_counts_no_noise = topic_counts[topic_counts.index != -1]
@@ -317,7 +321,7 @@ print(f"Mean topic size: {topic_counts_no_noise.mean():.1f}")
 print(f"Median topic size: {topic_counts_no_noise.median():.0f}")
 ```
 
-*Figure 1: Distribution of images across topics. The histogram shows a right-skewed distribution, with most topics containing few photographs and a small number of large topics dominating.*
+[Figure 1](#anchor-figure-distribution-*) shows a right-skewed distribution, with most topics containing few photographs and a small number of large topics dominating.
 
 Approximately half of the non-noise images are concentrated across roughly 80 topics, with the top 20 topics encompassing 5,840 images, representing 21.7 percent of the classified photographs. The subjects that attract the most visual focus (such as government offices, military formations, and formal meetings) are precisely aligned with themes of institutional authority and masculinity. This distribution suggests that the National Photo Company systematically prioritized certain subjects over others, rather than providing a comprehensive documentation of life in Washington.
 
