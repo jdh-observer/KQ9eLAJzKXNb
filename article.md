@@ -17,7 +17,7 @@ jupyter:
 <!-- #endregion -->
 
 <!-- #region tags=["contributor"] -->
-### Nabeel Siddiqui
+### Nabeel Siddiqui [![orcid](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-6126-5833) 
 Susquehanna University
 <!-- #endregion -->
 
