@@ -360,7 +360,7 @@ The extended range of smaller topics illustrates the collection's diversity beyo
 
 ### Patterns of Visual Emphasis
 
-An analysis of the content within individual topics reveals distinct tendencies of visual focus. The top ten topics are delineated in [Table 1](#table-1-*), demonstrating consistent themes predominantly centered on governmental authority and civic life.
+An analysis of the content within individual topics reveals distinct tendencies of visual focus. The top ten topics are delineated in [Table 1](#anchor-table-1), demonstrating consistent themes predominantly centered on governmental authority and civic life.
 
 <!-- #region jdh={"object": {"source": ["Table 1: Top 10 topics by image count with representative keywords"], "type": "table"}} tags=["table-1-*"] -->
 
