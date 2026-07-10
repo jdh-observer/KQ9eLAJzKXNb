@@ -322,7 +322,7 @@ print(f"Mean topic size: {topic_counts_no_noise.mean():.1f}")
 print(f"Median topic size: {topic_counts_no_noise.median():.0f}")
 ```
 
-* [Figure 1](#anchor-figure-topic-distribution) shows a right-skewed distribution, with most topics containing few photographs and a small number of large topics dominating.*
+* [Figure 1](#anchor-topic-distribution) shows a right-skewed distribution, with most topics containing few photographs and a small number of large topics dominating.*
 
 
 Approximately half of the non-noise images are concentrated across roughly 80 topics, with the top 20 topics encompassing 5,840 images, representing 21.7 percent of the classified photographs. The subjects that attract the most visual focus (such as government offices, military formations, and formal meetings) are precisely aligned with themes of institutional authority and masculinity. This distribution suggests that the National Photo Company systematically prioritized certain subjects over others, rather than providing a comprehensive documentation of life in Washington.
@@ -353,16 +353,16 @@ print(f"50% of images contained in top {topics_for_50} topics")
 print(f"80% of images contained in top {topics_for_80} topics")
 ```
 
-* The curve in [Figure 2](#anchor-figure-cumulative-distribution) shows that a small number of large topics make up a disproportionate share of all classified photographs.*
+* The curve in [Figure 2](#anchor-cumulative-distribution) shows that a small number of large topics make up a disproportionate share of all classified photographs.*
 
 The extended range of smaller topics illustrates the collection's diversity beyond institutional authority. Beneath the principal categories, hundreds of more specialized subjects examine particular landmarks, specific types of ceremonies, individual sporting events, or distinctive photographic moments.
 
 
 ### Patterns of Visual Emphasis
 
-An analysis of the content within individual topics reveals distinct tendencies of visual focus. The top ten topics are delineated in [Table 1](#anchor-table-1), demonstrating consistent themes predominantly centered on governmental authority and civic life.
+An analysis of the content within individual topics reveals distinct tendencies of visual focus. The top ten topics are delineated in [Table 1](#anchor-ten-topics), demonstrating consistent themes predominantly centered on governmental authority and civic life.
 
-<!-- #region jdh={"object": {"source": ["Table 1: Top 10 topics by image count with representative keywords"], "type": "table"}} tags=["table-1-*"] -->
+<!-- #region jdh={"object": {"source": ["Table 1: Top 10 topics by image count with representative keywords"], "type": "table"}} tags=["table-ten-topics-*"] -->
 
 
 | Rank | Topic ID | Image Count | Percentage | Representative Keywords |
@@ -403,7 +403,7 @@ print(f"Topic 0 — {topic_counts.get(0, 'N/A')} images")
 print(f"Keywords: {get_topic_keywords(0, topics_data)}")
 ```
 
-* The nine most representative photographs from this cluster ([Figure 3](#anchor-figure-representative-images)) illustrate the standardised visual language of desk portraits.*
+* The nine most representative photographs from this cluster ([Figure 3](#anchor-representative-images)) illustrate the standardised visual language of desk portraits.*
 
 
 **Military Power (Topic 1)**
@@ -425,7 +425,7 @@ print(f"Topic 1 — {topic_counts.get(1, 'N/A')} images")
 print(f"Keywords: {get_topic_keywords(1, topics_data)}")
 ```
 
-* In [Figure 4](#anchor-figure-topic1-images), the photographs depict military personnel in formal formations and official functions.*
+* In [Figure 4](#anchor-topic1-images), the photographs depict military personnel in formal formations and official functions.*
 
 
 **Official Governance (Topic 2)**
@@ -443,7 +443,7 @@ print(f"Topic 2 — {topic_counts.get(2, 'N/A')} images")
 print(f"Keywords: {get_topic_keywords(2, topics_data)}")
 ```
 
-* In [Figure 5](#anchor-figure-topic2-images): Formal meetings, treaty signings, and committee proceedings characterize this cluster.*
+* In [Figure 5](#anchor-topic2-images): Formal meetings, treaty signings, and committee proceedings characterize this cluster.*
 
 
 **Washington's Built Environment (Topic 5)**
@@ -465,7 +465,7 @@ print(f"Topic 5 — {topic_counts.get(5, 'N/A')} images")
 print(f"Keywords: {get_topic_keywords(5, topics_data)}")
 ```
 
-* [Figure 6](#anchor-figure-topic5-images) shows standardised documentation of residential architecture across the capital.*
+* [Figure 6](#anchor-topic5-images) shows standardised documentation of residential architecture across the capital.*
 
 
 ### Who Was Seen, Who Was Silenced
@@ -535,7 +535,7 @@ print(f"Classified images: {classified_count:,} ({100*classified_count/len(resul
 print(f"Noise cluster: {noise_count:,} ({100*noise_count/len(results_df):.1f}%)")
 ```
 
-* In [Figure 7](#anchor-figure-topic-distribution-noise), nearly a quarter of all photographs resist topical categorisation.*
+* In [Figure 7](#anchor-topic-distribution-noise), nearly a quarter of all photographs resist topical categorisation.*
 
 ```python jdh={"module": "object", "object": {"source": ["Representative images from the Noise Cluster (Topic -1)"], "type": "image"}} tags=["figure-images-noise-*"]
 # Figure 8: Noise cluster representative images
@@ -544,7 +544,7 @@ print(f"Noise Cluster (Topic -1) — {noise_count} images")
 print(f"Keywords: {get_topic_keywords(-1, topics_data)}")
 ```
 
-* In [Figure 8](#achor-figure-images-noise), the photographs resist topical categorisation, demonstrating the diversity of content that falls outside the collection's dominant visual logics.
+* In [Figure 8](#achor-images-noise), the photographs resist topical categorisation, demonstrating the diversity of content that falls outside the collection's dominant visual logics.
 
 Notably, the noise cluster may include precisely those photographs that oppose the primary visual themes of the collection, images whose meanings are heavily dependent on context or too unique to be captured through automated clustering. Several examples demonstrate this diversity. A photograph captioned "Mrs. Geo. Oakley Totten" shows "a woman sitting at a table with a sculpture of a ballerina in front of her... holding a paintbrush and appears to be in the process of painting the sculpture." This is an artistic domestic scene that goes beyond the collection's usual themes of institutional masculinity. Another image, simply captioned "Children," displays "a group of children and a man standing in front of a building... of different ages and ethnicities," thus subject challenges the conventions of formal portraiture common in most topics.
 
@@ -565,7 +565,7 @@ print("Figure 9: First National Bank of So. Md. Marlborough (LCCN2016826472).")
 print("Florence-2 incorrectly identifies the signage as 'Bank of America.'")
 ```
 
-* Florence-2 incorrectly identifies the signage in [Figure 9](#anchor-figure-bank-marlborough) as "Bank of America," demonstrating how vision-language models struggle with historical images containing period-specific text and unfamiliar institutional names.*
+* Florence-2 incorrectly identifies the signage in [Figure 9](#anchor-bank-marlborough) as "Bank of America," demonstrating how vision-language models struggle with historical images containing period-specific text and unfamiliar institutional names.*
 
 
 The second limitation relates to visual-textual translation itself. While the method detailed here is able to better capture semantic information than techniques that rely on only extracting low-level features, no automated method can capture aspects of meaning that defy verbal description. Photographs convey emotional responses, artistic arrangements of elements, and the physical sensation of viewing an image that go beyond what natural language captions can express. For instance, a photograph might evoke a sense of awe or unease through its lighting and shadows, or create a feeling of intimacy through its framing, but these affective dimensions are difficult to translate. Thus, this method may still miss the broader interpretive layers that historians might draw from contextual knowledge or visual literacy. 
@@ -581,7 +581,7 @@ print("Figure 10: Concentration camp uniforms (LCCN90709928).")
 print("This photograph postdates the National Photo Company's operations.")
 ```
 
-*This photograph ([Figure 10](#anchor-figure-camp-uniforms)) which clearly postdates the National Photo Company's operations (1909-1932), was found within the collection's noise cluster. Its presence demonstrates how computational methods can reveal archival provenance complications invisible through traditional interfaces.*
+*This photograph ([Figure 10](#anchor-camp-uniforms)) which clearly postdates the National Photo Company's operations (1909-1932), was found within the collection's noise cluster. Its presence demonstrates how computational methods can reveal archival provenance complications invisible through traditional interfaces.*
 
 <!-- #region tags=["hermeneutics"] -->
 ## Conclusion
